@@ -1,4 +1,4 @@
-# flutter_codepur
+# flutter_catalog
 
 A new Flutter project.
 
