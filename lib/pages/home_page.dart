@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class HomePage extends StatelessWidget {
   final int days = 20;
   final String name = "Payal";
@@ -7,7 +9,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Catalog App"),
+        // backgroundColor: Colors.white,
+        // elevation: 0.0,
+        // iconTheme: IconThemeData(color: Colors.black),
+        title: Text(
+          "Book Reseller",
+          //style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Center(
         child: Container(
@@ -19,7 +27,7 @@ class HomePage extends StatelessWidget {
           ),
         )),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
