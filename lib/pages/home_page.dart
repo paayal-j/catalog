@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_codepur/books/catalog.dart';
+import 'package:flutter_codepur/widgets/themes.dart';
 import '../widgets/drawer.dart';
 import '../widgets/item_widget.dart';
 import 'dart:convert';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -36,59 +38,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     //final dummyList = List.generate(20, (index) => CatalogBook.items[0]);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Novelflix",
-        ),
+        body: SafeArea(
+      child: Container(
+        padding: Vx.m32,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          "Novelflix".text.xl5.bold.color(MyTheme.darkBlueishColor).make(),
+          "Trending Books".text.xl2.make()
+        ]),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: (CatalogBook.items != null && CatalogBook.items.isNotEmpty)
-            ? GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 16,
-                  crossAxisSpacing: 16,
-                ),
-                itemBuilder: (context, index) {
-                  final item = CatalogBook.items[index];
-                  return Card(
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: GridTile(
-                        header: Container(
-                          child: Text(
-                            item.name,
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple,
-                          ),
-                        ),
-                        child: Image.network(
-                          item.image,
-                        ),
-                        footer: Container(
-                          child: Text(
-                            item.price.toString(),
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                          ),
-                        ),
-                      ));
-                },
-                itemCount: CatalogBook.items.length,
-              )
-            : Center(
-                child: CircularProgressIndicator(),
-              ),
-      ),
-      drawer: MyDrawer(),
-    );
+    ));
   }
 }
