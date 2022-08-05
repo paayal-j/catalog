@@ -17,13 +17,16 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
           color: Colors.white,
           child: ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
-            buttonPadding: EdgeInsets.all(16),
+            buttonPadding: EdgeInsets.all(8),
             children: [
               "\$${catalog.price}".text.bold.xl4.red800.make(),
               ElevatedButton(
@@ -34,8 +37,8 @@ class HomeDetailPage extends StatelessWidget {
                           shape: MaterialStateProperty.all(
                             StadiumBorder(),
                           )),
-                      child: "Buy".text.make())
-                  .wh(100, 50)
+                      child: "Add to cart".text.make())
+                  .wh(120, 50)
             ],
           ).p16(),
         ),
@@ -46,18 +49,17 @@ class HomeDetailPage extends StatelessWidget {
               Hero(
                       tag: Key(catalog.id.toString()),
                       child: Image.network(catalog.image))
-                  .h32(context)
-                  .p16(),
+                  .h32(context),
               Expanded(
                   child: VxArc(
-                height: 30.0,
-                arcType: VxArcType.CONVEY,
+                height: 20.0,
+                arcType: VxArcType.CONVEX,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.transparent,
                   width: context.screenWidth,
                   child: Column(children: [
-                    catalog.name.text.xl4
+                    catalog.name.text.center.xl3.italic
                         .color(MyTheme.darkBlueishColor)
                         .bold
                         .make(),
@@ -65,8 +67,15 @@ class HomeDetailPage extends StatelessWidget {
                         .textStyle(context.captionStyle)
                         .xl
                         .make(),
-                  ]).py64(),
-                ),
+                    5.heightBox,
+                    "Vestibulum et dictum ipsum Fusce tempus dolor et sem vulputate tristique. Mauris dapibus metus sed tempus rutrum. Ut vel rhoncus quam, at elementum velit. Aenean interdum bibendum ante, sodales sagittis ex vestibulum auctor. Morbi tincidunt nec sapien non interdum. Vestibulum pellentesque ex quis eros volutpat, et pellentesque sapien euismod. "
+                        .text
+                        .justify
+                        .textStyle(context.captionStyle)
+                        .make()
+                        .p16(),
+                  ]).py8(),
+                ).scrollVertical().p(20),
               ))
             ],
           ),
