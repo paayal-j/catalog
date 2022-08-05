@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_codepur/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -21,9 +21,9 @@ class HomeDetailPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
         ),
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.canvasColor,
         bottomNavigationBar: Container(
-          color: Colors.white,
+          color: context.cardColor,
           child: ButtonBar(
             alignment: MainAxisAlignment.spaceBetween,
             buttonPadding: EdgeInsets.all(8),
@@ -33,7 +33,7 @@ class HomeDetailPage extends StatelessWidget {
                       onPressed: () {},
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                              MyTheme.darkBlueishColor),
+                              context.theme.buttonColor),
                           shape: MaterialStateProperty.all(
                             StadiumBorder(),
                           )),
@@ -56,11 +56,11 @@ class HomeDetailPage extends StatelessWidget {
                 arcType: VxArcType.CONVEX,
                 edge: VxEdge.TOP,
                 child: Container(
-                  color: Colors.transparent,
+                  color: context.cardColor,
                   width: context.screenWidth,
                   child: Column(children: [
                     catalog.name.text.center.xl3.italic
-                        .color(MyTheme.darkBlueishColor)
+                        .color(context.accentColor)
                         .bold
                         .make(),
                     catalog.desc.text.center
