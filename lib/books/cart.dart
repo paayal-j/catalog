@@ -1,7 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_codepur/books/catalog.dart';
 
 class CartModel {
+  static final cartModel = CartModel._internal();
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+
   //Catalog Field
   late CatalogBook _catalog;
 
