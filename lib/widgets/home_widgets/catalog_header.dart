@@ -10,7 +10,7 @@ class CatalogHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       "Novelflix".text.xl5.bold.color(context.theme.accentColor).make(),
-      "Trending Books".text.xl.make()
+      "Trending Novels".text.xl.make()
     ]);
   }
 }

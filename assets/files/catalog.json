@@ -13,7 +13,7 @@
  "id" : 2,
 "name" : "Rework",
 "desc" : "Change the way you work forever",
-"price" : 20.3,
+"price" : 20,
 "color": "#00ac51",
 "image" : "https://images-na.ssl-images-amazon.com/images/I/61GFc+k-5PL.jpg"
 
@@ -33,7 +33,7 @@
  "id" : 4,
 "name" : "Quiet",
 "desc" : "The power of introverts in a world that can't stop talking",
-"price" : 31.8,
+"price" : 31,
 "color": "#3e4e9",
 "image" : "https://images-na.ssl-images-amazon.com/images/I/71NDnv8+hvL.jpg"
 
@@ -53,7 +53,7 @@
  "id" : 6,
 "name" : "Rich dad Poor Dad",
 "desc" : "Surroud yourself with people smarted than you",
-"price" : 23.4,
+"price" : 23,
 "color": "#3e4e9",
 "image" : "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1470282721l/29502358._SX318_.jpg"
 
@@ -69,7 +69,7 @@
  "id" : 8,
 "name" : "Getting things done",
 "desc" : "The personal productivity guru",
-"price" : 17.6,
+"price" : 17,
 "color": "#3e4e9",
 "image" : "https://5.imimg.com/data5/LI/YM/MY-62061127/getting-things-done-book-500x500.png"
 
@@ -87,7 +87,7 @@
  "id" : 10,
 "name" : "The Obstacle Is The Way",
 "desc" : "Imagine you’re advising yourself as a friend to keep an objective perspective.",
-"price" : 24.1,
+"price" : 24,
 "color": "#3e4e9",
 "image" : "https://images-na.ssl-images-amazon.com/images/I/71Za+yDrvTL.jpg"
 
@@ -103,7 +103,7 @@
  "id" : 12,
 "name" : "The Power of Now",
 "desc" : "Realize deeply that the present moment is all you have.",
-"price" : 18.5,
+"price" : 18,
 "color": "#3e4e9",
 "image" : "https://m.media-amazon.com/images/I/4108V6JJ+jL.jpg"
 
@@ -121,7 +121,7 @@
  "id" : 14,
 "name" : "Girl, Wash your face",
 "desc" : "Only you is ultimately responsible for who you become and how happy you are.",
-"price" : 23.5,
+"price" : 23,
 "color": "#3e4e9",
 "image" : "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-8.jpg"
 
@@ -137,7 +137,7 @@
  "id" : 16,
 "name" : "The 48 laws of power",
 "desc" : "Confuse competitors by acting unpredictably.",
-"price" : 7.9,
+"price" : 7,
 "color": "#3e4e9",
 "image" : "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-11.jpg"
 
@@ -153,7 +153,7 @@
  "id" : 18,
 "name" : "Man's search for meaning",
 "desc" : "Your life has its own meaning and it’s up to you to find it.",
-"price" : 5.8,
+"price" : 5,
 "color": "#3e4e9",
 "image" : "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-13.jpg"
 
@@ -171,7 +171,7 @@
  "id" : 20,
 "name" : "Big Magic",
 "desc" : "Let your fears coexist with your passions.",
-"price" : 30.2,
+"price" : 30,
 "color": "#3e4e9",
 "image" : "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-16.jpg"
 
