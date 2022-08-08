@@ -1,9 +1,8 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, camel_case_types
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_codepur/books/cart.dart';
-import 'package:flutter_codepur/widgets/themes.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 import '../core/store.dart';
@@ -22,8 +21,8 @@ class CartPage extends StatelessWidget {
       body: Column(
         children: [
           _CartList().p32().expand(),
-          Divider(),
-          _cartTotal(),
+          const Divider(),
+          const _cartTotal(),
         ],
       ),
     );
@@ -42,8 +41,8 @@ class _cartTotal extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           VxConsumer(
-            notifications: {},
-            mutations: {RemoveMutation},
+            notifications: const {},
+            mutations: const {RemoveMutation},
             builder: (context, status, dynamic) {
               return "\$${_cart.totalPrice}"
                   .text
@@ -80,9 +79,9 @@ class _CartList extends StatelessWidget {
         : ListView.builder(
             itemCount: _cart.items.length,
             itemBuilder: (context, index) => ListTile(
-              leading: Icon(Icons.done),
+              leading: const Icon(Icons.done),
               trailing: IconButton(
-                icon: Icon(Icons.remove_circle_outline),
+                icon: const Icon(Icons.remove_circle_outline),
                 onPressed: () {
                   RemoveMutation(_cart.items[index]);
                 },

@@ -10,7 +10,6 @@ class CartModel {
 //get catalog
   CatalogBook get catalog => _catalog;
   set catalog(CatalogBook newCatalog) {
-    assert(newCatalog != null);
     _catalog = newCatalog;
   }
 
