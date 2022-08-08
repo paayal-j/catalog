@@ -6,7 +6,7 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
+    const imageUrl =
         "https://storage.googleapis.com/ares-profile-pictures/hd/foodiespoint._-580c0c5778a782a360f4282ff8a7dd40_hd.jpg";
 
     return Drawer(
@@ -14,7 +14,7 @@ class MyDrawer extends StatelessWidget {
       color: Colors.deepPurple,
       child: ListView(
         padding: EdgeInsets.zero,
-        children: [
+        children: const [
           DrawerHeader(
               padding: EdgeInsets.zero,
               margin: EdgeInsets.zero,
